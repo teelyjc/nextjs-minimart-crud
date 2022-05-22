@@ -259,7 +259,7 @@ export function StockPage() {
       >
         <Dialog.Panel className="absolute border rounded-xl transition transition-all delay-300 ease-in-out duration-300 -translate-y-6 inset-48 bg-white drop-shadow-2xl justify-center flex flex-col">
           <Dialog.Title className="text-center text-2xl">
-            เพิ่มสินค้าในคลัง / สต๊อก
+            ลบสินค้า
           </Dialog.Title>
           <div className="flex flex-row justify-center space-x-2">
             <button
