@@ -46,7 +46,7 @@ export default function SignUpComponent({ allowRegistration }) {
     setMessage({ success: false, errorMessage: "", successMessage: "" });
 
     // if !error will do!
-    if (!handleError.isError) {
+    if (!message.errorMessage) {
       await post('/api/authentication/signup', {
         username: userInput.username,
         password: userInput.password,
