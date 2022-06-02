@@ -54,7 +54,10 @@ export default function SignUpComponent({ allowRegistration }) {
       }).then(({ data: { success, message }}) => {
         if (success) {
           setMessage({ success: true, successMessage: message });
-          Router.push('/authentication/signin')
+          
+          setTimeout(() => {
+            Router.push('/authentication/signin');
+          }, 3000)
           // clear form when success
           setUserInput({ username: "", password: "", confirm_password: "", email: "" });
           return;
