@@ -95,6 +95,12 @@ export default function CashierComponent({ user }) {
   }
 
   const handlePurchase = async () => {
+    if (user.role !== 1) {
+      return setMessage({
+        success: true,
+        errorMessage: "คุณไมไ่ด้รับอนุญาติให้ชำระสินค้า",
+      })
+    }
     if (!handleCustomerValue || handleCustomerValue < handlePrice()) {
       return setMessage({ success: true, errorMessage: "กรุณากรอกจำนวนเงินที่ถูกต้อง" });
     }
